@@ -1,0 +1,4 @@
+TransactionID,CustomerName,Product,Category,Quantity,Price,TransactionDate
+1,John Doe,Laptop,Electronics,1,1200.0,2024-01-01
+2,Jane Smith,Smartphone,Electronics,2,800.0,2024-01-02
+3,Bob Johnson,Shirt,Clothing,3,30.0,2024-01-03
