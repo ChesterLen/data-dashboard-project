@@ -3,7 +3,7 @@ import plotly.express as px
 import pandas as pd
 import sqlite3
 
-db_connection = sqlite3.connect('sales_data.db')
+db_connection = sqlite3.connect('../sales_data.db')
 df = pd.read_sql_query('SELECT * FROM Sales', db_connection)
 
 app = Dash(__name__)
