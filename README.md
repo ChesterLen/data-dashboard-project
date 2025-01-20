@@ -1,6 +1,6 @@
 🛍️ Sales Data Dashboard
 
-Welcome to the Sales Data Dashboard project! This repository contains all the code and resources for analyzing sales data and creating an interactive dashboard to visualize key business metrics using Python and SQL.
+This repository contains all the code and resources for analyzing sales data and creating an interactive dashboard to visualize key business metrics using Python and SQL.
 
 📋 Project Overview
 
@@ -33,3 +33,44 @@ Top 5 best-selling products.
 Customer spending insights.
 
 Customizable Filters: Filter data by date, product category, or customer.
+
+🔧 Getting Started
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/sales-data-dashboard.git
+cd sales-data-dashboard
+
+2. Set Up the Environment
+
+Create and activate a virtual environment:
+
+python -m venv env
+source env/bin/activate    # For macOS/Linux
+env\Scripts\activate      # For Windows
+
+Install the required dependencies:
+
+pip install -r requirements.txt
+
+3. Create or Load the Dataset
+
+Use the create_dataset.py script to generate the dataset:
+
+python src/create_dataset.py
+
+The dataset will be saved as data/sales_data.csv.
+
+4. Import the Dataset into SQL
+
+Run the import_to_sql.py script to import the dataset into a local SQLite database:
+
+python src/import_to_sql.py
+
+5. Run the Dashboard
+
+Start the dashboard application:
+
+python src/dashboard_app.py
+
+Open your browser and navigate to http://127.0.0.1:8050/ to view the dashboard.
