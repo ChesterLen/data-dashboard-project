@@ -1,6 +1,7 @@
 🛍️ Sales Data Dashboard
 
-This repository contains all the code and resources for analyzing sales data and creating an interactive dashboard to visualize key business metrics using Python and SQL.
+This repository contains all the code and resources for analyzing sales data and creating an interactive dashboard to
+visualize key business metrics using Python and SQL.
 
 📋 Project Overview
 
@@ -46,8 +47,8 @@ cd sales-data-dashboard
 Create and activate a virtual environment:
 
 python -m venv env
-source env/bin/activate    # For macOS/Linux
-env\Scripts\activate      # For Windows
+source env/bin/activate # For macOS/Linux
+env\Scripts\activate # For Windows
 
 Install the required dependencies:
 
@@ -74,3 +75,38 @@ Start the dashboard application:
 python src/dashboard_app.py
 
 Open your browser and navigate to http://127.0.0.1:8050/ to view the dashboard.
+
+📈 Key SQL Queries
+
+Here are some of the key SQL queries used in this project:
+
+Monthly Revenue:
+
+SELECT strftime('%Y-%m', TransactionDate) AS Month, SUM(Price * Quantity) AS Revenue
+FROM Sales
+GROUP BY Month
+ORDER BY Month;
+
+Top-Selling Products:
+
+SELECT Product, SUM(Quantity) AS TotalQuantity
+FROM Sales
+GROUP BY Product
+ORDER BY TotalQuantity DESC
+LIMIT 5;
+
+Customer Segmentation by Revenue:
+
+SELECT CustomerName, SUM(Price * Quantity) AS TotalSpent
+FROM Sales
+GROUP BY CustomerName
+ORDER BY TotalSpent DESC;
+
+📊 Technologies Used
+
+Python: Dash, Plotly, Pandas
+
+SQL: SQLite (easily adaptable to MySQL or other databases)
+
+Development Tools: SQLiteStudio, DBeaver
+
